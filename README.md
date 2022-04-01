@@ -18,6 +18,8 @@ Abrir un terminal
 * Ejecutar `short-answer-game`, para el juego de preguntas donde debemos escribir la respuesta.
 * Ejecutar `choose-answer-game`, para el juego de preguntas donde debemos elegir la respuesta correcta.
 
+> NOTA: Para aumentar la dificultad haremos `short-answer-game NUMBER`, donde NUMBER será un valor entre 1-4 por el momento.
+
 # Silabario japonés
 
 ## Hiragana
