@@ -1,10 +1,6 @@
 
 [![Gem Version](https://badge.fury.io/rb/learn-japanese.svg)](https://badge.fury.io/rb/learn-japanese)
 
-```
-UNDER DEVELOPMENT!!!
-```
-
 # Aprender japonés
 
 `japones-tool` es un programa Ruby de licencia libre para ayudar a aprender el japonés.
