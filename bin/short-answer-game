@@ -1,0 +1,8 @@
+#!/usr/bin/env ruby
+$LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
+
+require 'learn-japanese/game/short-answer-game'
+
+level = 2
+ShortAnswerGame.show_help(level)
+ShortAnswerGame.new(level).run
