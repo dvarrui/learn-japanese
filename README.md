@@ -14,8 +14,9 @@ Para instalar el programa:
 
 ## Modo de Uso
 
-1. Abrir un terminal
-2. Ejecutar `short-answer-game`.
+Abrir un terminal
+* Ejecutar `short-answer-game`, para el juego de preguntas donde debemos escribir la respuesta.
+* Ejecutar `choose-answer-game`, para el juego de preguntas donde debemos elegir la respuesta correcta.
 
 # Silabario japonés
 
