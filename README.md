@@ -1,4 +1,6 @@
 
+[![Gem Version](https://badge.fury.io/rb/learn-japanese.svg)](https://badge.fury.io/rb/learn-japanese)
+
 ```
 UNDER DEVELOPMENT!!!
 ```
