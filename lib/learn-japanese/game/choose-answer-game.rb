@@ -14,6 +14,7 @@ class ChooseAnswerGame
     @silabario.merge! Hiragana.group2 if @level > 1
     @silabario.merge! Hiragana.group3 if @level > 2
     @silabario.merge! Hiragana.group4 if @level > 3
+
     @keys = @silabario.keys
   end
 
