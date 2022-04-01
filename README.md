@@ -8,7 +8,7 @@ De momento, sólo se está empezando a implementar la funcionalidad para aprende
 
 Para instalar el programa:
 1. Debes tener Ruby instalado en tu equipo.
-2. Abrir un terminal y ejecutar `sudo gem install `learn-japanese`, para instalar la herramienta.
+2. Abrir un terminal y ejecutar `sudo gem install learn-japanese`, para instalar la herramienta.
 
 ## Modo de Uso
 
