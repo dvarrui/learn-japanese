@@ -3,7 +3,7 @@
 
 # Aprender japonés
 
-`japones-tool` es un programa Ruby de licencia libre para ayudar a aprender el japonés.
+`learn-japanese` es un programa Ruby de licencia libre para ayudar a aprender el japonés.
 De momento, sólo se está empezando a implementar la funcionalidad para aprender el Silabario Hiragana, pero poco a poco irá creciendo a medida que yo mismo aprenda más japonés.
 
 Para instalar el programa:
