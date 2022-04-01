@@ -8,7 +8,7 @@ class ShortAnswerGame
   def initialize(level=1)
     @level = level
     @score = 1
-    @max_score = 10
+    @max_score = 20
 
     @silabario = Hiragana.group1
     @silabario.merge! Hiragana.group2 if @level > 1
