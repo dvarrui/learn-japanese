@@ -8,10 +8,13 @@ class ShortAnswerGame
   def initialize(level=1)
     @level = level
     @score = 1
-    @max_score = 20
+    @max_score = 10
 
     @silabario = Hiragana.group1
     @silabario.merge! Hiragana.group2 if @level > 1
+    @silabario.merge! Hiragana.group3 if @level > 2
+    @silabario.merge! Hiragana.group4 if @level > 3
+
     @keys = @silabario.keys
   end
 
@@ -23,7 +26,7 @@ class ShortAnswerGame
     Debug.puts_line
     while @score < @max_score
       @keys.shuffle!
-      @keys.each { |key| guess_japanise_symbol(key) }
+      guess_japanise_symbol(@keys[0])
     end
   end
 

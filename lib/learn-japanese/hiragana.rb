@@ -22,11 +22,31 @@ class Hiragana
     }
   end
 
+  def self.group3
+    { sa: "\u{3055}",
+      si: "\u{3057}",
+      su: "\u{3059}",
+      se: "\u{305B}",
+      so: "\u{305D}"
+    }
+  end
+
+  def self.group4
+    { ta: "\u{305F}",
+      ti: "\u{3061}",
+      tu: "\u{3064}",
+      te: "\u{3066}",
+      to: "\u{3068}"
+    }
+  end
+
   def self.show_help(level=1)
     Debug.puts_line
     puts "Hiragana help\n".upcase.cyan
 
     Debug.puts_group Hiragana.group1
     Debug.puts_group Hiragana.group2 if level > 1
+    Debug.puts_group Hiragana.group3 if level > 2
+    Debug.puts_group Hiragana.group4 if level > 3
   end
 end
