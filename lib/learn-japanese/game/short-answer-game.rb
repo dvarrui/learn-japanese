@@ -5,10 +5,10 @@ require_relative '../hiragana'
 
 class ShortAnswerGame
 
-  def initialize(level=1)
+  def initialize(level=1, max=10)
     @level = level
     @score = 1
-    @max_score = 10
+    @max_score = max
 
     @silabario = Hiragana.group1
     @silabario.merge! Hiragana.group2 if @level > 1
