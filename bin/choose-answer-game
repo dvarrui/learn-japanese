@@ -3,7 +3,8 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'learn-japanese/game/choose-answer-game'
 
-level = ARGV.first.to_i || 1
+level = ARGV.first.to_i
+
 if level.zero?
   name = File.basename(__FILE__)
   puts "Usage: #{name} [NUMBER], where NUMBER is level [1,2,3]"
