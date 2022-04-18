@@ -40,6 +40,14 @@ class Hiragana
     }
   end
 
+  def self.all
+    output = self.group1
+    output.merge!(self.group2)
+    output.merge!(self.group3)
+    output.merge!(self.group4)
+    output
+  end
+
   def self.show_help(level=1)
     Debug.puts_line
     puts "Hiragana help\n".upcase.cyan
