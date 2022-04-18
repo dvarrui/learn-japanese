@@ -15,4 +15,5 @@ Gem::Specification.new name, JaponesTool::VERSION do |s|
   s.license     = "GPL-3"
 
   s.add_runtime_dependency "colorize"
+  s.add_runtime_dependency "thor"
 end
