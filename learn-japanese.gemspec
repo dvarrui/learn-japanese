@@ -5,10 +5,10 @@ $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 name = "learn-japanese"
 require "#{name}/version"
 
-Gem::Specification.new name, JaponesTool::VERSION do |s|
-  s.summary     = "Learn Japanese (UNDER DEVELOPMENT!!!)"
+Gem::Specification.new name, LearnJapanese::VERSION do |s|
+  s.summary     = "Learn Japanese (UNDER DEVELOPMENT)"
   s.email       = "dvarrui@protonmail.com"
-  s.homepage    = JaponesTool::HOMEPAGE
+  s.homepage    = LearnJapanese::HOMEPAGE
   s.authors     = ["David Vargas Ruiz"]
   s.files       = `git ls-files`.split("\n")
   s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }

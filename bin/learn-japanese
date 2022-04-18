@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
-require 'learn-japanese/game/sound-game'
+require 'learn-japanese/cli'
 
-SoundGame.loop_hiragana_game
+CLI.start(ARGV)
