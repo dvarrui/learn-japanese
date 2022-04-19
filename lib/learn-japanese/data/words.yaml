@@ -22,7 +22,7 @@
   spanish: bien
 - sounds: i-e
   hiragana: いいえ
-  spanish: no
+  spanish: 'no'
 - sounds: ué
   hiragana: うえ
   spanish: arriba

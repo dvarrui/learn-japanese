@@ -30,9 +30,12 @@ module SoundGame
       print "\nWrite sounds ? ".light_yellow
       sounds = STDIN.gets.chomp.split
       word = self.to_hiragana(sounds)
-      puts "Hiragana    => #{word["hiragana"]}"
-      puts "Spanish     => #{word["spanish"]}"
-      puts "Pronounce   => #{word["sounds"]}"
+      print "Hiragana    => ".white
+      puts word["hiragana"]
+      print "Spanish     => ".white
+      puts word["spanish"]
+      print "Pronounce   => ".white
+      puts word["sounds"]
     end
   end
 
