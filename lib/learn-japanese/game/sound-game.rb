@@ -18,12 +18,12 @@ module SoundGame
     word
   end
 
-  def self.loop_hiragana_game
+  def self.run
     sounds = "init"
     until sounds.empty?
       puts "[ Sounds to Hiragana ] Example: a i => あい （amor - ái）".white
       print "  Write sounds ? ".light_yellow
-      sounds = gets.chomp.split
+      sounds = STDIN.gets.chomp.split
       word = self.to_hiragana(sounds)
       puts "  Hiragana    => #{word["hiragana"]}".cyan
       puts "  Spanish     => #{word["spanish"]}".cyan

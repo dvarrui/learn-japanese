@@ -21,4 +21,10 @@ class CLI < Thor
   def short_answer(level)
     LearnJapanese.short_answer(level.to_i)
   end
+
+  map ['so', '-so', '--sound', 'sound'] => 'sound'
+  desc 'sound', 'Write sounds and get the Hiragana'
+  def sound
+    LearnJapanese.sound
+  end
 end

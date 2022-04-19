@@ -3,4 +3,4 @@
 $LOAD_PATH.unshift File.expand_path('../../lib', __FILE__)
 require 'learn-japanese/game/sound-game'
 
-SoundGame.loop_hiragana_game
+SoundGame.run

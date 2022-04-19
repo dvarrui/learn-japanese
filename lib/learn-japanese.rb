@@ -2,6 +2,7 @@
 require_relative 'learn-japanese/version'
 require_relative 'learn-japanese/game/choose-answer-game'
 require_relative 'learn-japanese/game/short-answer-game'
+require_relative 'learn-japanese/game/sound-game'
 
 module LearnJapanese
 
@@ -24,5 +25,9 @@ module LearnJapanese
     show_help unless level > 0
     ShortAnswerGame.show_help(level)
     ShortAnswerGame.new(level).run
+  end
+
+  def self.sound
+    SoundGame.run
   end
 end
