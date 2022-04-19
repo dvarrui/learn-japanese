@@ -24,7 +24,7 @@ class Hiragana
 
   def self.group3
     { sa: "\u{3055}",
-      si: "\u{3057}",
+      shi: "\u{3057}",
       su: "\u{3059}",
       se: "\u{305B}",
       so: "\u{305D}"
@@ -33,8 +33,8 @@ class Hiragana
 
   def self.group4
     { ta: "\u{305F}",
-      ti: "\u{3061}",
-      tu: "\u{3064}",
+      chi: "\u{3061}",
+      tsu: "\u{3064}",
       te: "\u{3066}",
       to: "\u{3068}"
     }
