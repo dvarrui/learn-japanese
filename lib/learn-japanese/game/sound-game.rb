@@ -1,6 +1,7 @@
 
 require_relative '../hiragana'
 require_relative '../dictionary'
+require_relative '../debug'
 require 'colorize'
 
 module SoundGame
@@ -19,15 +20,19 @@ module SoundGame
   end
 
   def self.run
+    Debug.puts_line
+    puts "SOUNDS TO HIRAGANA".light_cyan
+    puts "Example: a i => あい （amor - ái）".blue
+    Debug.puts_line
+
     sounds = "init"
     until sounds.empty?
-      puts "[ Sounds to Hiragana ] Example: a i => あい （amor - ái）".white
-      print "  Write sounds ? ".light_yellow
+      print "\nWrite sounds ? ".light_yellow
       sounds = STDIN.gets.chomp.split
       word = self.to_hiragana(sounds)
-      puts "  Hiragana    => #{word["hiragana"]}".cyan
-      puts "  Spanish     => #{word["spanish"]}".cyan
-      puts "  Pronounce   => #{word["sounds"]}".cyan
+      puts "Hiragana    => #{word["hiragana"]}"
+      puts "Spanish     => #{word["spanish"]}"
+      puts "Pronounce   => #{word["sounds"]}"
     end
   end
 
