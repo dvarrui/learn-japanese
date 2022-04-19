@@ -1,19 +1,46 @@
 ---
-- sounds: e
-  hiragana: え
-  spanish: pintura
 - sounds: ái
   hiragana: あい
   spanish: amor
+- sounds: áka
+  hiragana: あか
+  spanish: rojo)
 - sounds: áo
   hiragana: あお
   spanish: azul
+- sounds: e
+  hiragana: え
+  spanish: pintura
+- sounds: éki
+  hiragana: えき
+  spanish: estación de tren
 - sounds: ié
   hiragana: いえ
   spanish: casa
 - sounds: íi
   hiragana: いい
   spanish: bien
+- sounds: i-e
+  hiragana: いいえ
+  spanish: no
 - sounds: ué
   hiragana: うえ
   spanish: arriba
+- sounds: ka
+  hiragana: か
+  spanish: mosquito
+- sounds: kaó
+  hiragana: かお
+  spanish: cara
+- sounds: ki
+  hiragana: き
+  spanish: árbol
+- sounds: kíkai
+  hiragana: きかい
+  spanish: máquina, oportunidad
+- sounds: áisatsu
+  hiragana: あいさつ
+  spanish: salud
+- sounds: áisatsu wo suru
+  hiragana: あいさつをする
+  spanish: saludar
