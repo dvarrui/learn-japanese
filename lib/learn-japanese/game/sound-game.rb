@@ -12,7 +12,7 @@ module SoundGame
     hiragana_array = sounds.map { hiraganas[_1.to_sym] || '*' }
     hiragana = hiragana_array.join('')
 
-    none = {'hiragana': hiragana, 'spanish': '?', 'sounds': '?'}
+    none = {'hiragana' => hiragana, 'spanish' => '?', 'sounds' => '?'}
     words = Dictionary.new.words
     word = (words.select {_1["hiragana"] == hiragana})[0] || none
 
@@ -25,10 +25,11 @@ module SoundGame
     puts "Example: a i => あい （amor - ái）".blue
     Debug.puts_line
 
-    sounds = "init"
-    until sounds.empty?
+    loop do
       print "\nWrite sounds ? ".light_yellow
       sounds = STDIN.gets.chomp.split
+      return if sounds.empty?
+
       word = self.to_hiragana(sounds)
       print "Hiragana    => ".white
       puts word["hiragana"]

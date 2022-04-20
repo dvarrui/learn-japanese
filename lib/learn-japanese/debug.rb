@@ -15,4 +15,9 @@ class Debug
   def self.puts_line
     STDOUT.puts ('=' * 20).white
   end
+
+  def self.break
+    require 'debug'
+    binding.break
+  end
 end
