@@ -13,7 +13,7 @@ module SoundGame
     hiragana = hiragana_array.join('')
 
     none = {'hiragana' => hiragana, 'spanish' => '?', 'sounds' => '?'}
-    words = Dictionary.new.words
+    words = Dictionary.words
     word = (words.select {_1["hiragana"] == hiragana})[0] || none
 
     word
