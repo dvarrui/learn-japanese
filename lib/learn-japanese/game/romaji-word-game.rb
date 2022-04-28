@@ -3,7 +3,7 @@
 require_relative '../debug'
 require_relative '../data/hiragana'
 
-class ChooseAnswerGame
+class RomajiWordGame
 
   def initialize(level=1, max=10)
     @level = level
@@ -25,28 +25,25 @@ class ChooseAnswerGame
   def run
     Debug.puts_line
     while @score < @max_score
-      guess_japanise_symbol(@keys)
+      @keys.shuffle!
+      guess_romanji(@keys[0])
     end
   end
 
   private
 
-  def guess_japanise_symbol(keys)
-    keys.shuffle!
-    good = keys[0].clone
-    options = [ keys[0], keys[1], keys[2], keys[3] ].shuffle
-
-    japanises = options.map { @silabario[_1] }
+  def guess_japanise_symbol(key)
+    japanise = @silabario[key]
     progress = "[ #{@score}/#{@max_score} ]"
-    print  "#{progress.white} #{japanises.join(', ')} #{good.to_s.light_yellow}? (1,2,3,4) "
+    print  "#{progress.white} #{japanise.light_yellow} ? "
 
-    index = STDIN.gets.to_i
-    exit if index.zero?
-    if good == options[(index - 1)]
+    resp = STDIN.gets.chomp
+    exit if resp.empty?
+    if resp == key.to_s
       @score += 1
       return true
     end
-    puts "La respuesta es #{@silabario[good]}".light_red
+    puts "La respuesta es #{key}".light_red
     false
   end
 end

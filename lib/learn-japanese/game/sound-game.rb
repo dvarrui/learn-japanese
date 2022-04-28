@@ -1,8 +1,8 @@
 
-require_relative '../hiragana'
-require_relative '../dictionary'
-require_relative '../debug'
 require 'colorize'
+require_relative '../debug'
+require_relative '../data/dictionary'
+require_relative '../data/hiragana'
 
 module SoundGame
 

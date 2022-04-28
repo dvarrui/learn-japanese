@@ -1,5 +1,5 @@
 require 'colorize'
-require_relative 'debug'
+require_relative '../debug'
 
 # Silabario japonés
 class Hiragana
@@ -46,6 +46,16 @@ class Hiragana
     output.merge!(self.group3)
     output.merge!(self.group4)
     output
+  end
+
+  def self.groups(levels)
+    return self.all if levels == :all
+    hiragana = {}
+    hiragana.merge! Hiragana.group1 if levels.include? 1
+    hiragana.merge! Hiragana.group2 if levels.include? 2
+    hiragana.merge! Hiragana.group3 if levels.include? 3
+    hiragana.merge! Hiragana.group4 if levels.include? 4
+    hiragana
   end
 
   def self.show_help(level=1)

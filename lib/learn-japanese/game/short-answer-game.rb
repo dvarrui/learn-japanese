@@ -1,7 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative '../debug'
-require_relative '../hiragana'
+require_relative '../data/hiragana'
 
 class ShortAnswerGame
 
