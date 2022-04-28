@@ -58,6 +58,12 @@ class Hiragana
     hiragana
   end
 
+  def self.sound_to_hiragana(sounds)
+    hiraganas = Hiragana.all
+    hiragana_array = sounds.map { hiraganas[_1.to_sym] || '*' }
+    hiragana = hiragana_array.join('')
+  end
+
   def self.show_help(level=1)
     Debug.puts_line
     puts "Hiragana help\n".upcase.cyan
