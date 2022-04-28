@@ -26,22 +26,21 @@ class RomanjiGame
   def guess_romanji(data)
     hiragana = data['hiragana']
     spanish = data['spanish']
-    sound = data['sound']
+    sounds = data['sounds']
     progress = "[ #{@score}/#{@max_score} ]"
 
     print  "#{progress.white} Write Romanji for #{hiragana.light_yellow}: "
     resp = STDIN.gets.chomp
-
     exit if resp.empty?
-    #require 'debug'; binding.break
+
     good = Hiragana.hiraganas_to_sound(hiragana.split(''))
     if resp == good
-      Hiragana.hiraganas_to_sound(hiragana.split)
       @score += 1
+      puts ' '*10+"#{spanish} (#{sounds})".white
       return true
     end
     puts "Right answer is #{good}".light_red
-    puts data
+    puts ' '*10+"#{spanish} (#{sounds})".red
     false
   end
 
