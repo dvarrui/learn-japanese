@@ -27,4 +27,10 @@ class CLI < Thor
   def sound
     LearnJapanese.sound
   end
+
+  map ['ro', '-ro', '--romanji' ] => 'romaji'
+  desc 'romaji', 'Write Romaji for Hiragana word'
+  def romanji
+    LearnJapanese.romanji
+  end
 end

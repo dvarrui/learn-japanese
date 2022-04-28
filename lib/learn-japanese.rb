@@ -3,6 +3,7 @@ require_relative 'learn-japanese/version'
 require_relative 'learn-japanese/game/choose-answer-game'
 require_relative 'learn-japanese/game/short-answer-game'
 require_relative 'learn-japanese/game/sound-game'
+require_relative 'learn-japanese/game/romanji-game'
 
 module LearnJapanese
 
@@ -29,5 +30,9 @@ module LearnJapanese
 
   def self.sound
     SoundGame.run
+  end
+
+  def self.romanji
+    RomanjiGame.new.run
   end
 end

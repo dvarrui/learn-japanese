@@ -7,7 +7,7 @@ require_relative '../data/hiragana'
 module SoundGame
 
   def self.to_hiragana(sounds)
-    hiragana = Hiragana.sound_to_hiragana(sounds)
+    hiragana = Hiragana.sounds_to_hiragana(sounds)
 
     none = {'hiragana' => hiragana, 'spanish' => '?', 'sounds' => '?'}
     words = Dictionary.words
