@@ -34,7 +34,7 @@ class Hiragana
   def self.group4
     { ta: "\u{305F}",
       chi: "\u{3061}",
-      tsu: "\u{3064}",
+      tsu: "\u{3064}", # つ
       te: "\u{3066}",
       to: "\u{3068}"
     }

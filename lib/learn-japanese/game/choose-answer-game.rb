@@ -10,10 +10,15 @@ class ChooseAnswerGame
     @score = 1
     @max_score = max
 
-    @silabario = Hiragana.group1
-    @silabario.merge! Hiragana.group2 if @level > 1
-    @silabario.merge! Hiragana.group3 if @level > 2
-    @silabario.merge! Hiragana.group4 if @level > 3
+    #@silabario = Hiragana.group1
+    #@silabario.merge! Hiragana.group2 if @level > 1
+    #@silabario.merge! Hiragana.group3 if @level > 2
+    #@silabario.merge! Hiragana.group4 if @level > 3
+    #@silabario.merge! Hiragana.group4 if @level > 4
+    #@silabario.merge! Hiragana.group5 if @level > 5
+    #@silabario.merge! Hiragana.group6 if @level > 6
+    levels = (1..@level).to_a
+    @silabario = Hiragana.groups(levels)
 
     @keys = @silabario.keys
   end
