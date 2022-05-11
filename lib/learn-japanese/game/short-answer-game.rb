@@ -14,6 +14,8 @@ class ShortAnswerGame
     @silabario.merge! Hiragana.group2 if @level > 1
     @silabario.merge! Hiragana.group3 if @level > 2
     @silabario.merge! Hiragana.group4 if @level > 3
+    @silabario.merge! Hiragana.group5 if @level > 4
+    @silabario.merge! Hiragana.group6 if @level > 5
 
     @keys = @silabario.keys
   end

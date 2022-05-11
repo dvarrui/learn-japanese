@@ -40,11 +40,31 @@ class Hiragana
     }
   end
 
+  def self.group5
+    { na: "\u{306A}",
+      ni: "\u{306B}",
+      nu: "\u{306C}",
+      ne: "\u{306D}",
+      no: "\u{306E}"
+    }
+  end
+
+  def self.group6
+    { ha: "\u{306F}",
+      hi: "\u{3072}",
+      hu: "\u{3075}",
+      he: "\u{3078}",
+      ho: "\u{307B}"
+    }
+  end
+
   def self.all
     output = self.group1
     output.merge!(self.group2)
     output.merge!(self.group3)
     output.merge!(self.group4)
+    output.merge!(self.group5)
+    output.merge!(self.group6)
     output
   end
 
@@ -55,6 +75,8 @@ class Hiragana
     hiragana.merge! Hiragana.group2 if levels.include? 2
     hiragana.merge! Hiragana.group3 if levels.include? 3
     hiragana.merge! Hiragana.group4 if levels.include? 4
+    hiragana.merge! Hiragana.group4 if levels.include? 5
+    hiragana.merge! Hiragana.group4 if levels.include? 6
     hiragana
   end
 
@@ -86,5 +108,8 @@ class Hiragana
     Debug.puts_group Hiragana.group2 if level > 1
     Debug.puts_group Hiragana.group3 if level > 2
     Debug.puts_group Hiragana.group4 if level > 3
+    Debug.puts_group Hiragana.group5 if level > 4
+    Debug.puts_group Hiragana.group6 if level > 5
+    Debug.puts_group Hiragana.group7 if level > 6
   end
 end
