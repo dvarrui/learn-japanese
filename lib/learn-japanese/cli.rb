@@ -30,7 +30,7 @@ class CLI < Thor
 
   map ['ro', '-ro', '--romanji' ] => 'romaji'
   desc 'romaji', 'Write Romaji for Hiragana word'
-  def romanji
-    LearnJapanese.romanji
+  def romaji
+    LearnJapanese.romaji
   end
 end

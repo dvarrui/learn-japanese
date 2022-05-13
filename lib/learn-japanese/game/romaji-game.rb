@@ -3,7 +3,7 @@
 require_relative '../debug'
 require_relative '../data/dictionary'
 
-class RomanjiGame
+class RomajiGame
 
   def initialize(level=1, max=10)
     @level = level
@@ -17,13 +17,13 @@ class RomanjiGame
     Debug.puts_line
     while @score < @max_score
       @words.shuffle!
-      guess_romanji(@words.first)
+      guess_romaji(@words.first)
     end
   end
 
   private
 
-  def guess_romanji(data)
+  def guess_romaji(data)
     hiragana = data['hiragana']
     spanish = data['spanish']
     sounds = data['sounds']
