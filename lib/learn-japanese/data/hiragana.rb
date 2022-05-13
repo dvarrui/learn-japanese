@@ -1,8 +1,15 @@
+require 'yaml'
 require 'colorize'
 require_relative '../debug'
 
-# Silabario japonés
 class Hiragana
+  # Silabario japonés
+  attr_reader :data
+
+  def initialize
+    filename = File.join(File.dirname(__FILE__), 'hiragana.yaml')
+    @data = YAML.load(File.read(filename))
+  end
 
   def self.group1
     { a: "\u{3042}",
