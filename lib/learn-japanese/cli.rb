@@ -12,7 +12,7 @@ class CLI < Thor
 
   map ['ca', '-ca', '--choose-answer', 'choose-answer'] => 'choose_answer'
   option :level
-  desc 'choose-answer [LEVEL]', 'LEVEL = 1-6'
+  desc 'choose-answer [--level=NUMBER]', 'Values 1-6'
   def choose_answer()
     level = options[:level].to_i
     LearnJapanese.choose_answer(level)
@@ -20,7 +20,7 @@ class CLI < Thor
 
   map ['sa', '-sa', '--short-answer', 'short-answer'] => 'short_answer'
   option :level
-  desc 'short-answer [LEVEL]', 'LEVEL = 1-6'
+  desc 'short-answer [--level=NUMBER]', 'Values 1-6'
   def short_answer()
     level = options[:level].to_i
     LearnJapanese.short_answer(level)
