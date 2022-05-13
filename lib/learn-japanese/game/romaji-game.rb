@@ -36,11 +36,11 @@ class RomajiGame
     good = Hiragana.hiraganas_to_sound(hiragana.split(''))
     if resp == good
       @score += 1
-      puts ' '*10+"#{spanish} (#{sounds})".white
+      puts ' ' * 9 + "#{spanish} (#{sounds})".white
       return true
     end
     puts "Right answer is #{good}".light_red
-    puts ' '*10+"#{spanish} (#{sounds})".red
+    puts ' ' * 9 + "#{spanish} (#{sounds})".red
     false
   end
 
