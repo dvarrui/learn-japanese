@@ -15,13 +15,11 @@ class Hiragana
     @data[index - 1]
   end
 
-  def all
-    output = group 1
-    output.merge!(group 2)
-    output.merge!(group 3)
-    output.merge!(group 4)
-    output.merge!(group 5)
-    output.merge!(group 6)
+  def all_groups
+    output = {}
+    @data.each do |group|
+      output.merge!(group)
+    end
     output
   end
 
@@ -38,13 +36,13 @@ class Hiragana
   end
 
   def sounds_to_hiragana(sounds)
-    hiraganas = all
+    hiraganas = all_groups
     hiragana_array = sounds.map { hiraganas[_1.to_sym] || '*' }
     hiragana = hiragana_array.join('')
   end
 
   def hiraganas_to_sound(hiraganas_input)
-    all_hiraganas = all
+    all_hiraganas = all_groups
 
     sounds_array = hiraganas_input.map do |hiragana_input|
       sound = '*'
