@@ -1,6 +1,6 @@
 
 module LearnJapanese
-  VERSION  = '0.8.2'
+  VERSION  = '0.9.0'
   NAME     = 'learn-japanese'
   HOMEPAGE = 'https://github.com/dvarrui/learn-japanese'
 end
