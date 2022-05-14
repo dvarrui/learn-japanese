@@ -2,6 +2,7 @@
 
 require_relative '../debug'
 require_relative '../data/dictionary'
+require_relative '../data/hiragana'
 
 class RomajiGame
 
@@ -33,7 +34,7 @@ class RomajiGame
     resp = STDIN.gets.chomp
     exit if resp.empty?
 
-    good = Hiragana.hiraganas_to_sound(hiragana.split(''))
+    good = Hiragana.new.hiraganas_to_sound(hiragana.split(''))
     if resp == good
       @score += 1
       puts ' ' * 9 + "#{spanish} (#{sounds})".white
