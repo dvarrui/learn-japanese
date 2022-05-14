@@ -6,25 +6,23 @@ require_relative '../data/hiragana'
 class ShortAnswerGame
 
   def initialize(level=1, max=10)
+    @hiragana = Hiragana.new
+
     @level = level
     @score = 1
     @max_score = max
 
-    @silabario = Hiragana.group1
-    @silabario.merge! Hiragana.group2 if @level > 1
-    @silabario.merge! Hiragana.group3 if @level > 2
-    @silabario.merge! Hiragana.group4 if @level > 3
-    @silabario.merge! Hiragana.group5 if @level > 4
-    @silabario.merge! Hiragana.group6 if @level > 5
+    @silabario = @hiragana.groups( (1..level).to_a )
 
     @keys = @silabario.keys
   end
 
-  def self.show_help(level=1)
-    Hiragana.show_help(level)
+  def show_help(level=1)
+    @hiragana.show_help(level)
   end
 
   def run
+    @hiragana.show_help(@level)
     Debug.puts_line
     while @score < @max_score
       @keys.shuffle!

@@ -4,10 +4,14 @@ require_relative '../debug'
 require_relative '../data/dictionary'
 require_relative '../data/hiragana'
 
-module SoundGame
+class SoundGame
 
-  def self.to_hiragana(sounds)
-    hiragana = Hiragana.sounds_to_hiragana(sounds)
+  def initialize()
+    @hiragana = Hiragana.new
+  end
+
+  def to_hiragana(sounds)
+    hiragana = @hiragana.sounds_to_hiragana(sounds)
 
     none = {'hiragana' => hiragana, 'spanish' => '?', 'sounds' => '?'}
     words = Dictionary.words
@@ -16,7 +20,7 @@ module SoundGame
     word
   end
 
-  def self.run
+  def run
     Debug.puts_line
     puts "SOUNDS TO HIRAGANA".light_cyan
     puts "Example: a i => あい （amor - ái）".blue
@@ -27,7 +31,7 @@ module SoundGame
       sounds = STDIN.gets.chomp.split
       return if sounds.empty?
 
-      word = self.to_hiragana(sounds)
+      word = to_hiragana(sounds)
       print "Hiragana    => ".white
       puts word["hiragana"]
       print "Spanish     => ".white
