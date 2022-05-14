@@ -31,7 +31,7 @@ module LearnJapanese
   end
 
   def self.sound
-    SoundGame.run
+    SoundGame.new.run
   end
 
 end
