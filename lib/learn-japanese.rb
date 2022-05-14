@@ -18,7 +18,6 @@ module LearnJapanese
 
   def self.choose_answer(level)
     show_help unless level > 0
-    ChooseAnswerGame.show_help(level)
     ChooseAnswerGame.new(level).run
   end
 

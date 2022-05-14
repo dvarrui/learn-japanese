@@ -6,6 +6,7 @@ require_relative '../data/hiragana'
 class ChooseAnswerGame
 
   def initialize(level=1, max=10)
+    @hiragana = Hiragana.new
     @level = level
     @score = 1
     @max_score = max
@@ -18,16 +19,13 @@ class ChooseAnswerGame
     #@silabario.merge! Hiragana.group5 if @level > 5
     #@silabario.merge! Hiragana.group6 if @level > 6
     levels = (1..@level).to_a
-    @silabario = Hiragana.groups(levels)
+    @silabario = @hiragana.groups(levels)
 
     @keys = @silabario.keys
   end
 
-  def self.show_help(level=1)
-    Hiragana.show_help(level)
-  end
-
   def run
+    @hiragana.show_help(@level)
     Debug.puts_line
     while @score < @max_score
       guess_japanise_symbol(@keys)
