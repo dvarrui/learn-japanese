@@ -14,7 +14,7 @@ class CLI < Thor
   option :level
   desc 'choose-answer [--level=NUMBER]', 'Values 1-6'
   def choose_answer()
-    level = options[:level].to_i
+    level = options['level'].to_i
     LearnJapanese.choose_answer(level)
   end
 
@@ -22,7 +22,7 @@ class CLI < Thor
   option :level
   desc 'short-answer [--level=NUMBER]', 'Values 1-6'
   def short_answer()
-    level = options[:level].to_i
+    level = options['level'].to_i
     LearnJapanese.short_answer(level)
   end
 
