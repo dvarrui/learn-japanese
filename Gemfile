@@ -3,4 +3,3 @@ gemspec
 
 gem 'bump'
 gem 'rake'
-gem 'colorize'
