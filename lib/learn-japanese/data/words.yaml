@@ -1,13 +1,19 @@
 ---
-- sounds: ái
-  hiragana: あい
-  spanish: amor
 - sounds: áka
   hiragana: あか
   spanish: rojo
+- sounds: ái
+  hiragana: あい
+  spanish: amor
 - sounds: áo
   hiragana: あお
   spanish: azul
+- sounds: áisatsu
+  hiragana: あいさつ
+  spanish: salud
+- sounds: áisatsu wo suru
+  hiragana: あいさつをする
+  spanish: saludar
 - sounds: e
   hiragana: え
   spanish: pintura
@@ -23,9 +29,6 @@
 - sounds: i-e
   hiragana: いいえ
   spanish: 'no'
-- sounds: ué
-  hiragana: うえ
-  spanish: arriba
 - sounds: ka
   hiragana: か
   spanish: mosquito
@@ -38,12 +41,15 @@
 - sounds: kíkai
   hiragana: きかい
   spanish: máquina, oportunidad
-- sounds: áisatsu
-  hiragana: あいさつ
-  spanish: salud
-- sounds: áisatsu wo suru
-  hiragana: あいさつをする
-  spanish: saludar
 - sounds: ohayou
   hiragana: おはよう
   spanish: Buenos días (casual)
+- sounds: osake
+  hiragana: おさは
+  spanish: Licor
+- sounds: sake
+  hiragana: さは
+  spanish: Licor
+- sounds: ué
+  hiragana: うえ
+  spanish: arriba
