@@ -30,7 +30,7 @@ class RomajiGame
     sounds = data['sounds']
     progress = "[ #{@score}/#{@max_score} ]"
 
-    print  "#{progress.white} Write Romanji for #{hiragana.light_yellow}: "
+    print  "#{progress.white} Write Romaji for #{hiragana.light_yellow}: "
     resp = STDIN.gets.chomp
     exit if resp.empty?
 
