@@ -7,7 +7,7 @@ require "#{name}/version"
 
 Gem::Specification.new name, LearnJapanese::VERSION do |s|
   s.summary     = "Learn Japanese (UNDER DEVELOPMENT)"
-  s.email       = "dvarrui@protonmail.com"
+  s.email       = "dvarrui@proton.me"
   s.homepage    = LearnJapanese::HOMEPAGE
   s.authors     = ["David Vargas Ruiz"]
   s.files       = `git ls-files`.split("\n")

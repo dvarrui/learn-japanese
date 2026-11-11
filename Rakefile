@@ -6,6 +6,6 @@ Bundler::GemHelper.install_tasks
 
 task :default => :run
 
-task :run do
-  exec "./bin/hiragana-game"
-end
+# task :run do
+#   exec "./bin/hiragana-game"
+# end
