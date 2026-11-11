@@ -1,9 +1,8 @@
 
 # Choose font
 
-Font: "Migu 1M / M+"
+Install font **Migu 1M / M+** in Opensuse installation:
 
-Opensuse installation:
 ```bash
 sudo zypper in mplus-fonts
 fc-cache -fv
