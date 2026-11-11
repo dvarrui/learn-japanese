@@ -7,8 +7,8 @@ class Debug
     keys = group.keys
     keys = group.keys.map { |i| " #{i}" } if group.keys.first == :a
 
-    STDOUT.puts group.values.join(' ').light_blue
-    STDOUT.puts keys.join(' ').blue
+    STDOUT.puts group.values.map{_1.to_s.ljust(2)}.join(' ').light_blue
+    STDOUT.puts keys.map{_1.to_s.ljust(3)}.join(' ').blue
     STDOUT.puts "\n"
   end
 
