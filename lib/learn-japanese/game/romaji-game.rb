@@ -1,12 +1,11 @@
 #!/usr/bin/env ruby
 
-require_relative '../debug'
-require_relative '../data/dictionary'
-require_relative '../data/hiragana'
+require_relative "../debug"
+require_relative "../data/dictionary"
+require_relative "../data/hiragana"
 
 class RomajiGame
-
-  def initialize(level=1, max=10)
+  def initialize(level = 1, max = 10)
     @level = level
     @score = 1
     @max_score = max
@@ -25,24 +24,23 @@ class RomajiGame
   private
 
   def guess_romaji(data)
-    hiragana = data['hiragana']
-    spanish = data['spanish']
-    sounds = data['sounds']
+    hiragana = data["hiragana"]
+    spanish = data["spanish"]
+    sounds = data["sounds"]
     progress = "[ #{@score}/#{@max_score} ]"
 
-    print  "#{progress.white} Write Romaji for #{hiragana.light_yellow}: "
-    resp = STDIN.gets.chomp
+    print "#{progress.white} Write Romaji for #{hiragana.light_yellow}: "
+    resp = $stdin.gets.chomp
     exit if resp.empty?
 
-    good = Hiragana.new.hiraganas_to_sound(hiragana.split(''))
+    good = Hiragana.new.hiraganas_to_sound(hiragana.chars)
     if resp == good
       @score += 1
-      puts ' ' * 9 + "#{spanish} (#{sounds})".white
+      puts " " * 9 + "#{spanish} (#{sounds})".white
       return true
     end
     puts "Right answer is #{good}".light_red
-    puts ' ' * 9 + "#{spanish} (#{sounds})".red
+    puts " " * 9 + "#{spanish} (#{sounds})".red
     false
   end
-
 end

@@ -1,23 +1,19 @@
-
-require 'colorize'
-require_relative '../debug'
-require_relative '../data/dictionary'
-require_relative '../data/hiragana'
+require "colorize"
+require_relative "../debug"
+require_relative "../data/dictionary"
+require_relative "../data/hiragana"
 
 class SoundGame
-
-  def initialize()
+  def initialize
     @hiragana = Hiragana.new
   end
 
   def to_hiragana(sounds)
     hiragana = @hiragana.sounds_to_hiragana(sounds)
 
-    none = {'hiragana' => hiragana, 'spanish' => '?', 'sounds' => '?'}
+    none = {"hiragana" => hiragana, "spanish" => "?", "sounds" => "?"}
     words = Dictionary.words
-    word = (words.select {_1["hiragana"] == hiragana})[0] || none
-
-    word
+    words.select { _1["hiragana"] == hiragana }[0] || none
   end
 
   def run
@@ -28,7 +24,7 @@ class SoundGame
 
     loop do
       print "\nWrite sounds ? ".light_yellow
-      sounds = STDIN.gets.chomp.split
+      sounds = $stdin.gets.chomp.split
       return if sounds.empty?
 
       word = to_hiragana(sounds)
@@ -40,5 +36,4 @@ class SoundGame
       puts word["sounds"]
     end
   end
-
 end

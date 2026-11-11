@@ -1,23 +1,22 @@
 #!/usr/bin/env ruby
 
-require_relative '../debug'
-require_relative '../data/hiragana'
+require_relative "../debug"
+require_relative "../data/hiragana"
 
 class ShortAnswerGame
-
-  def initialize(level=1, max=10)
+  def initialize(level = 1, max = 10)
     @hiragana = Hiragana.new
 
     @level = level
     @score = 1
     @max_score = max
 
-    @silabario = @hiragana.groups( (1..level).to_a )
+    @silabario = @hiragana.groups((1..level).to_a)
 
     @keys = @silabario.keys
   end
 
-  def show_help(level=1)
+  def show_help(level = 1)
     @hiragana.show_help(level)
   end
 
@@ -35,9 +34,9 @@ class ShortAnswerGame
   def guess_japanise_symbol(key)
     japanise = @silabario[key]
     progress = "[ #{@score}/#{@max_score} ]"
-    print  "#{progress.white} #{japanise.light_yellow} ? "
+    print "#{progress.white} #{japanise.light_yellow} ? "
 
-    resp = STDIN.gets.chomp
+    resp = $stdin.gets.chomp
     exit if resp.empty?
     if resp == key.to_s
       @score += 1

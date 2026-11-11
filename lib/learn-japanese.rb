@@ -1,12 +1,10 @@
-
-require_relative 'learn-japanese/version'
-require_relative 'learn-japanese/game/choose-answer-game'
-require_relative 'learn-japanese/game/short-answer-game'
-require_relative 'learn-japanese/game/sound-game'
-require_relative 'learn-japanese/game/romaji-game'
+require_relative "learn-japanese/version"
+require_relative "learn-japanese/game/choose-answer-game"
+require_relative "learn-japanese/game/short-answer-game"
+require_relative "learn-japanese/game/sound-game"
+require_relative "learn-japanese/game/romaji-game"
 
 module LearnJapanese
-
   def self.show_version
     puts "#{LearnJapanese::NAME} (version #{LearnJapanese::VERSION})"
   end
@@ -33,5 +31,4 @@ module LearnJapanese
   def self.sound
     SoundGame.new.run
   end
-
 end
