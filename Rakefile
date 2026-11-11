@@ -1,11 +1,17 @@
-require "bundler/setup"
 require "bundler/gem_tasks"
-require "bump/tasks"
+require "rake/testtask"
 
-Bundler::GemHelper.install_tasks
+desc "Help"
+task :help do
+  system("rake -T")
+end
 
-task :default => :run
+Rake::TestTask.new(:test) do |t|
+  t.libs << "test"
+  t.libs << "lib"
+  t.test_files = FileList["test/**/*_test.rb"]
+end
 
-# task :run do
-#   exec "./bin/hiragana-game"
-# end
+require "standard/rake"
+
+task default: %i[test standard]
