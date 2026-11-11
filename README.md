@@ -19,7 +19,8 @@
 * Open a terminal and run `learn-japanese` command to show available functions.
 
 ```
-❯ ./bin/learn-japanese             
+$ learn-japanese             
+
 Commands:
   learn-japanese choose-answer [--level=NUMBER]  # Values 1-6
   learn-japanese help [COMMAND]                  # Describe available commands or one specific command
