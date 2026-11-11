@@ -1,20 +1,26 @@
-#encoding: utf-8
+require_relative "lib/learn-japanese/version"
 
-$LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
+Gem::Specification.new do |s|
+  s.name = LearnJapanese::NAME
+  s.version = LearnJapanese::VERSION
+  s.license = "AGPL-3.0"
+  s.authors = ["David Vargas Ruiz"]
+  s.email = "dvarrui@proton.me"
 
-name = "learn-japanese"
-require "#{name}/version"
+  s.homepage = LearnJapanese::HOMEPAGE
+  s.summary = "Learn Japanese (UNDER DEVELOPMENT)"
+  s.description = "Learn Japanese (UNDER DEVELOPMENT)"
 
-Gem::Specification.new name, LearnJapanese::VERSION do |s|
-  s.summary     = "Learn Japanese (UNDER DEVELOPMENT)"
-  s.email       = "dvarrui@proton.me"
-  s.homepage    = LearnJapanese::HOMEPAGE
-  s.authors     = ["David Vargas Ruiz"]
-  s.files       = `git ls-files`.split("\n")
-  s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
-  s.license     = "GPL-3.0"
+  # s.executables = `git ls-files -- bin/*`.split("\n").map{ |f| File.basename(f) }
+  # s.files       = `git ls-files`.split("\n")
+  s.extra_rdoc_files = ["README.md", "LICENSE"] + Dir.glob(File.join("docs", "**", "*.md"))
+  s.executables << "learn-japanese"
+  s.files = Dir.glob(File.join("lib", "**", "*.*"))
 
-  s.add_runtime_dependency "colorize"
-  s.add_runtime_dependency "ruby2d"
-  s.add_runtime_dependency "thor"
+  s.required_ruby_version = ">= 3.3.10"
+  s.add_runtime_dependency "colorize", "~> 1.1"
+  s.add_runtime_dependency "ruby2d", "~> 0.12"
+  s.add_runtime_dependency "thor", "~> 1.5"
+
+  s.add_development_dependency "standard", "~> 1.57"
 end
