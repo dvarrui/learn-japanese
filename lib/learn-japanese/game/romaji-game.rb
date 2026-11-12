@@ -39,8 +39,8 @@ class RomajiGame
       puts " " * 9 + "#{spanish} (#{sounds})".white
       return true
     end
-    puts "Right answer is #{good}".light_red
-    puts " " * 9 + "#{spanish} (#{sounds})".red
+    # puts "Right answer is #{good}".light_red
+    puts " " * 9 + "#{spanish} (#{sounds})".light_red
     false
   end
 end
