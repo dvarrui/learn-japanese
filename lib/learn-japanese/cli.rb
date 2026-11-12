@@ -10,29 +10,29 @@ class CLI < Thor
     LearnJapanese.show_version
   end
 
-  map ["ca", "-ca", "--choose-answer", "choose-answer"] => "choose_answer"
+  map ["c", "-c", "--choose"] => "choose"
   option :level
-  desc "choose-answer [--level=NUMBER]", "Values 1-6"
-  def choose_answer
+  desc "choose [--level=NUMBER]", "Values 1-6"
+  def choose
     level = options["level"].to_i
-    LearnJapanese.choose_answer(level)
+    LearnJapanese.choose(level)
   end
 
-  map ["sa", "-sa", "--short-answer", "short-answer"] => "short_answer"
+  map ["s", "-s", "--short"] => "short"
   option :level
-  desc "short-answer [--level=NUMBER]", "Values 1-6"
-  def short_answer
+  desc "short [--level=NUMBER]", "Values 1-6"
+  def short
     level = options["level"].to_i
-    LearnJapanese.short_answer(level)
+    LearnJapanese.short(level)
   end
 
-  map ["so", "-so", "--sound", "sound"] => "sound"
+  map ["so", "-so", "--sound"] => "sound"
   desc "sound", "Util: Write sounds and show Hiragana"
   def sound
     LearnJapanese.sound
   end
 
-  map ["ro", "-ro", "--romanji"] => "romaji"
+  map ["r", "-r", "--romanji"] => "romaji"
   desc "romaji", "You have to Write Romaji for every Hiragana word"
   def romaji
     LearnJapanese.romaji

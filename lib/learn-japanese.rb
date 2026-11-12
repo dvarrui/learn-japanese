@@ -14,7 +14,7 @@ module LearnJapanese
     exit 0
   end
 
-  def self.choose_answer(level)
+  def self.choose(level)
     show_help unless level > 0
     ChooseAnswerGame.new(level).run
   end
@@ -23,7 +23,7 @@ module LearnJapanese
     RomajiGame.new.run
   end
 
-  def self.short_answer(level)
+  def self.short(level)
     show_help unless level > 0
     ShortAnswerGame.new(level).run
   end
