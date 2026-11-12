@@ -32,6 +32,10 @@ class Hiragana
     hiragana.merge! group 4 if levels.include? 4
     hiragana.merge! group 4 if levels.include? 5
     hiragana.merge! group 5 if levels.include? 6
+    hiragana.merge! group 6 if levels.include? 7
+    hiragana.merge! group 7 if levels.include? 8
+    hiragana.merge! group 8 if levels.include? 9
+    hiragana.merge! group 9 if levels.include? 10
     hiragana
   end
 
@@ -66,5 +70,8 @@ class Hiragana
     Debug.puts_group group(5) if level > 4
     Debug.puts_group group(6) if level > 5
     Debug.puts_group group(7) if level > 6
+    Debug.puts_group group(8) if level > 7
+    Debug.puts_group group(9) if level > 8
+    Debug.puts_group group(10) if level > 9
   end
 end
