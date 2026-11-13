@@ -7,12 +7,16 @@ class HiraganaTest < Test::Unit::TestCase
   def test_new
     h = Hiragana.new
 
-    assert_equal 6, h.data.size
+    assert_equal 9, h.data.size
   end
 
   def test_every_group_has_6_symbols
     data = Hiragana.new.data
 
-    data.each { |group| assert_equal 5, group.size }
+    data.each_with_index do |group, index|
+      total = 5
+      total = 3 if index == 7
+      assert_equal total, group.size
+    end
   end
 end

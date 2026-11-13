@@ -17,9 +17,7 @@ class Hiragana
 
   def all_groups
     output = {}
-    @data.each do |group|
-      output.merge!(group)
-    end
+    @data.each { |group| output.merge!(group) }
     output
   end
 
