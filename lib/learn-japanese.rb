@@ -1,8 +1,8 @@
 require_relative "learn-japanese/version"
-require_relative "learn-japanese/game/choose-answer-game"
-require_relative "learn-japanese/game/short-answer-game"
-require_relative "learn-japanese/game/sound-game"
-require_relative "learn-japanese/game/romaji-game"
+require_relative "learn-japanese/game/choose-answer"
+require_relative "learn-japanese/game/short-answer"
+require_relative "learn-japanese/game/sound"
+require_relative "learn-japanese/game/romaji"
 
 module LearnJapanese
   def self.show_version
@@ -14,18 +14,18 @@ module LearnJapanese
     exit 0
   end
 
-  def self.choose(level)
-    show_help unless level > 0
-    ChooseAnswerGame.new(level).run
+  def self.choose
+    show_help
+    Game::ChooseAnswer.new.run
   end
 
   def self.romaji
-    RomajiGame.new.run
+    Game::Romaji.new.run
   end
 
-  def self.short(level)
-    show_help unless level > 0
-    ShortAnswerGame.new(level).run
+  def self.short
+    show_help
+    Game::ShortAnswer.new.run
   end
 
   def self.sound

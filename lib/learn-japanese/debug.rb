@@ -3,7 +3,7 @@ require "colorize"
 class Debug
   def self.puts_group(group)
     keys = group.keys
-    keys = group.keys.map { |i| " #{i}" } if group.keys.first == :a
+    keys = group.keys.map { |i| " #{i}" } if group.keys.to_s.len == 1
 
     $stdout.puts group.values.map { _1.to_s.ljust(2) }.join(" ").light_blue
     $stdout.puts keys.map { _1.to_s.ljust(3) }.join(" ").blue

@@ -10,20 +10,16 @@ class CLI < Thor
     LearnJapanese.show_version
   end
 
-  map ["c", "-c", "--choose"] => "choose"
-  option :level
-  desc "choose [--level=NUMBER]", "Values 1-9"
-  def choose
-    level = options["level"].to_i
-    LearnJapanese.choose(level)
+  map ["c", "-c", "--choose", "choose"] => "choose_answer"
+  desc "choose", "Choose the right answer"
+  def choose_answer
+    LearnJapanese.choose
   end
 
   map ["s", "-s", "--short"] => "short"
-  option :level
-  desc "short [--level=NUMBER]", "Values 1-9"
+  desc "short", "Write right answer"
   def short
-    level = options["level"].to_i
-    LearnJapanese.short(level)
+    LearnJapanese.short
   end
 
   map ["so", "-so", "--sound"] => "sound"

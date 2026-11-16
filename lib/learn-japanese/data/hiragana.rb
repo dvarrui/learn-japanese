@@ -57,7 +57,7 @@ class Hiragana
     sounds_array.join("")
   end
 
-  def show_help(level = 1)
+  def show_help
     Debug.puts_line
     puts "Hiragana help\n".upcase.cyan
 
