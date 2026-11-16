@@ -1,7 +1,5 @@
 #!/usr/bin/env ruby
+require "debug"
 
 $LOAD_PATH.unshift File.expand_path("../lib", __FILE__)
 require "learn-japanese/cli"
-require "debug"
-
-CLI.start(ARGV)

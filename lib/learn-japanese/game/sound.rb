@@ -19,7 +19,7 @@ class SoundGame
   def run
     Debug.puts_line
     puts "SOUNDS TO HIRAGANA".light_cyan
-    puts "Example: a i => あい （amor - ái）".blue
+    puts "Example: a i => あい （amor - ái）".white
     Debug.puts_line
 
     loop do

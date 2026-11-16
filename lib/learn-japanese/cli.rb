@@ -34,3 +34,5 @@ class CLI < Thor
     LearnJapanese.romaji
   end
 end
+
+CLI.start(ARGV)
