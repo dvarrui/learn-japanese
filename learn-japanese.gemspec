@@ -21,6 +21,7 @@ Gem::Specification.new do |s|
   s.add_runtime_dependency "colorize", "~> 1.1"
   s.add_runtime_dependency "ruby2d", "~> 0.12"
   s.add_runtime_dependency "thor", "~> 1.5"
+  s.add_runtime_dependency "unicode-display_width", "~> 3.3"
 
   s.add_development_dependency "standard", "~> 1.57"
 end

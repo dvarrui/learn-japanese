@@ -36,7 +36,8 @@ class Hiragana
   end
 
   def show_help
-    puts ("=" * 20).white
+    Debug.puts_line
     puts "Hiragana help\n".upcase.cyan
+    Debug.puts_data(@data)
   end
 end
