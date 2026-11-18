@@ -10,27 +10,22 @@ module Game
   
       @score = 1
       @max_score = max
+    end
     
-      @keys = @hiragana.keys
-    end
-  
-    def show_help
-      @hiragana.show_help
-    end
-  
     def run
       @hiragana.show_help
+      keys = @hiragana.data.keys
       Debug.puts_line
       while @score < @max_score
-        @keys.shuffle!
-        guess_japanise_symbol(@keys[0])
+        keys.shuffle!
+        guess_japanise_symbol(keys[0])
       end
     end
   
     private
   
     def guess_japanise_symbol(key)
-      japanise = @silabario[key]
+      japanise = @hiragana.data[key]
       progress = "[ #{@score}/#{@max_score} ]"
       print "#{progress.white} #{japanise.light_yellow} ? "
   
