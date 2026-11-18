@@ -16,9 +16,9 @@ class CLI < Thor
     LearnJapanese.choose
   end
 
-  map ["s", "-s", "--short"] => "short"
+  map ["s", "-s", "--short", "short"] => "short_answer"
   desc "short", "Write right answer"
-  def short
+  def short_answer
     LearnJapanese.short
   end
 
