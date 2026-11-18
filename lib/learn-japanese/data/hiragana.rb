@@ -11,30 +11,8 @@ class Hiragana
     @data = YAML.load_file(filename)
   end
 
-  def group(index)
-    @data[index - 1]
-  end
-
-  def all_groups
-    output = {}
-    @data.each { |group| output.merge!(group) }
-    output
-  end
-
-  def groups(levels)
-    return all if levels == :all
-    hiragana = {}
-    hiragana.merge! group 1 if levels.include? 1
-    hiragana.merge! group 2 if levels.include? 2
-    hiragana.merge! group 3 if levels.include? 3
-    hiragana.merge! group 4 if levels.include? 4
-    hiragana.merge! group 4 if levels.include? 5
-    hiragana.merge! group 5 if levels.include? 6
-    hiragana.merge! group 6 if levels.include? 7
-    hiragana.merge! group 7 if levels.include? 8
-    hiragana.merge! group 8 if levels.include? 9
-    hiragana.merge! group 9 if levels.include? 10
-    hiragana
+  def symbols
+    @data.keys
   end
 
   def sounds_to_hiragana(sounds)
@@ -58,18 +36,7 @@ class Hiragana
   end
 
   def show_help
-    Debug.puts_line
+    puts ("=" * 20).white
     puts "Hiragana help\n".upcase.cyan
-
-    Debug.puts_group group(1)
-    Debug.puts_group group(2) if level > 1
-    Debug.puts_group group(3) if level > 2
-    Debug.puts_group group(4) if level > 3
-    Debug.puts_group group(5) if level > 4
-    Debug.puts_group group(6) if level > 5
-    Debug.puts_group group(7) if level > 6
-    Debug.puts_group group(8) if level > 7
-    Debug.puts_group group(9) if level > 8
-    Debug.puts_group group(10) if level > 9
   end
 end

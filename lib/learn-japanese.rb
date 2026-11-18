@@ -15,7 +15,6 @@ module LearnJapanese
   end
 
   def self.choose
-    show_help
     Game::ChooseAnswer.new.run
   end
 
@@ -24,7 +23,6 @@ module LearnJapanese
   end
 
   def self.short
-    show_help
     Game::ShortAnswer.new.run
   end
 

@@ -10,10 +10,8 @@ module Game
   
       @score = 1
       @max_score = max
-  
-      @silabario = @hiragana.groups((1..level).to_a)
-  
-      @keys = @silabario.keys
+    
+      @keys = @hiragana.keys
     end
   
     def show_help

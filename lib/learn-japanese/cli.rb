@@ -10,15 +10,15 @@ class CLI < Thor
     LearnJapanese.show_version
   end
 
-  map ["c", "-c", "--choose", "choose"] => "choose_answer"
+  map ["ch", "-ch", "--choose"] => "choose"
   desc "choose", "Choose the right answer"
-  def choose_answer
+  def choose
     LearnJapanese.choose
   end
 
-  map ["s", "-s", "--short", "short"] => "short_answer"
+  map ["s", "-s", "--short"] => "short"
   desc "short", "Write right answer"
-  def short_answer
+  def short
     LearnJapanese.short
   end
 
