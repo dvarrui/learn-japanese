@@ -1,52 +1,76 @@
 ---
-- sounds: áka
+- sounds: aka
   hiragana: あか
   spanish: rojo
-- sounds: ái
+- sounds: ai
   hiragana: あい
   spanish: amor
-- sounds: áo
+- sounds: ao
   hiragana: あお
   spanish: azul
-- sounds: áisatsu
+- sounds: aisatsu
   hiragana: あいさつ
   spanish: salud
-- sounds: áisatsu wo suru
+- sounds: aisatsu wo suru
   hiragana: あいさつをする
   spanish: saludar
+- sounds: asa
+  hiragana: あさ
+  spanish: mañana
 - sounds: e
   hiragana: え
   spanish: pintura
-- sounds: éki
+- sounds: eki
   hiragana: えき
   spanish: estación de tren
-- sounds: ié
+- sounds: ie
   hiragana: いえ
   spanish: casa
-- sounds: íi
+- sounds: ii
   hiragana: いい
   spanish: bien
 - sounds: i-e
   hiragana: いいえ
   spanish: 'no'
+- sounds: inu
+  hiragana: いぬ
+  spanish: perro
 - sounds: ka
   hiragana: か
   spanish: mosquito
-- sounds: kaó
+- sounds: kao
   hiragana: かお
   spanish: cara
 - sounds: ki
   hiragana: き
   spanish: árbol
-- sounds: kíkai
+- sounds: kikai
   hiragana: きかい
   spanish: máquina, oportunidad
+- sounds: konnichiwa
+  hiragana: こんにちは
+  spanish: hola
+- sounds: namae
+  hiragana: なまえ
+  spanish: nombre
 - sounds: ohayou
   hiragana: おはよう
   spanish: Buenos días (casual)
+- sounds: okane
+  hiragana: おかね
+  spanish: dinero
 - sounds: sake
   hiragana: さけ
-  spanish: Licor
-- sounds: ué
+  spanish: licor
+- sounds: suki
+  hiragana: すき
+  spanish: gustar
+- sounds: sukijanai
+  hiragana: すきじゃない
+  spanish: no me gusta
+- sounds: ue
   hiragana: うえ
   spanish: arriba
+- sounds: umi
+  hiragana: うみ
+  spanish: mar

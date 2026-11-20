@@ -22,11 +22,9 @@ class Hiragana
   end
 
   def hiraganas_to_sound(hiraganas_input)
-    all_hiraganas = all_groups
-
     sounds_array = hiraganas_input.map do |hiragana_input|
       sound = "*"
-      all_hiraganas.each_pair do |key, value|
+      @data.each_pair do |key, value|
         sound = key if value == hiragana_input
       end
       sound
