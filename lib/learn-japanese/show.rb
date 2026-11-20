@@ -10,24 +10,30 @@ class Show
     maxcol = 5
     lines = [
       %w[a i u e o],
-      %w[ka ki  ku  ke ko kya kyu kyo],
-      %w[sa shi su  se so sha shu sho],
-      %w[ta chi tsu te to cha chu cho],
-      %w[na ni  nu  ne no nya nyu nyo],
-      %w[na ni  nu  ne no nya nyu nyo],
-      %w[ha hi  fu  he ho hya hyu hyo],
+      %w[ka ki  ku  ke ko | kya kyu kyo],
+      %w[sa shi su  se so | sha shu sho],
+      %w[ta chi tsu te to | cha chu cho],
+      %w[na ni  nu  ne no | nya nyu nyo],
+      %w[na ni  nu  ne no | nya nyu nyo],
+      %w[ha hi  fu  he ho | hya hyu hyo],
       %w[ya SP  yu  SP yo],
-      %w[ra ri  ru  re ro rya ryu ryo],
+      %w[ra ri  ru  re ro | rya ryu ryo],
       %w[wa SP  SP  SP wo],
       %w[SP SP  SP  SP n],
-      %w[ga gi  gu  ge go gya gyu gyo],
-     ]
+      %w[ga gi  gu  ge go | gya gyu gyo],
+      %w[za ji  zu  ze zo | ja  ju  jo],
+      %w[da dji dzu de do | dja dju djo],
+      %w[ba bi  bu  be bo | bya byu byo],
+      %w[pa pi  pu  pe po | pya pyu pyo],
+      ]
     lines.each do |line|
       jap_line = []
       esp_line = []
       line.each do |es|
         if es == 'SP'
           es = ja = ''
+        elsif es == '|'
+          ja = '|'
         else
           ja = data[es]
           if ja.nil?

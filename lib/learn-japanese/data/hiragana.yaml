@@ -63,24 +63,47 @@ ro: ろ # (U+308D)
 rya: りゃ
 ryu: りゅ
 ryo: りょ
+wa: わ # U+308F
+wo: を # U+3092
+n: ん # U+3093
 gya: ぎゃ
 ga: が # 304C
 gi: ぎ
 gu: ぐ
 ge: げ
 go: ご
+gya: ぎゃ
+gyu: ぎゅ
+gyo: ぎょ
 za: ざ
 ji: じ
 zu: ず
 ze: ぜ
 zo: ぞ
-kwa: くゎ
-gyu: ぎゅ
-gyo: ぎょ
-wa: わ # U+308F
-wo: を # U+3092
-n: ん # U+3093
-
-
-
-
+ja: じゃ
+ju: じゅ
+jo: じょ
+da: だ
+dji: ぢ
+dzu: づ
+de: で
+do: ど
+dja: ぢゃ
+dju: ぢゅ
+djo: ぢょ
+ba: ば
+bi: び
+bu: ぶ
+be: べ
+bo: ぼ
+bya: びゃ
+byu: びゅ
+byo: びょ
+pa: ぱ
+pi: ぴ
+pu: ぷ
+pe: ぺ
+po: ぽ
+pya: ぴゃ
+pyu: ぴゅ
+pyo: ぴょ
