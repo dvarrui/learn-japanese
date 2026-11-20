@@ -1,6 +1,6 @@
 require "yaml"
 require "colorize"
-require_relative "../debug"
+require_relative "../show"
 
 class Hiragana
   # Silabario japonés
@@ -36,8 +36,9 @@ class Hiragana
   end
 
   def show_help
-    Debug.puts_line
+    Show.line
     puts "Hiragana help\n".upcase.cyan
-    Debug.puts_data(@data)
+    Show.table(@data)
+    Show.line
   end
 end

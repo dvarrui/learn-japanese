@@ -1,5 +1,5 @@
 require "colorize"
-require_relative "../debug"
+require_relative "../show"
 require_relative "../data/dictionary"
 require_relative "../data/hiragana"
 
@@ -17,10 +17,10 @@ class SoundGame
   end
 
   def run
-    Debug.puts_line
+    Show.line
     puts "SOUNDS TO HIRAGANA".light_cyan
     puts "Example: a i => あい （amor - ái）".white
-    Debug.puts_line
+    Show.line
 
     loop do
       print "\nWrite sounds ? ".light_yellow

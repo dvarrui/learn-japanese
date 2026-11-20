@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "../debug"
+require_relative "../show"
 require_relative "../data/dictionary"
 require_relative "../data/hiragana"
 
@@ -15,7 +15,7 @@ module Game
     end
   
     def run
-      Debug.puts_line
+      Show.line
       while @score < @max_score
         @words.shuffle!
         guess_romaji(@words.first)

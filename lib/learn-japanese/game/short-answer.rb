@@ -1,6 +1,5 @@
 #!/usr/bin/env ruby
 
-require_relative "../debug"
 require_relative "../data/hiragana"
 
 module Game
@@ -15,7 +14,6 @@ module Game
     def run
       @hiragana.show_help
       keys = @hiragana.data.keys
-      Debug.puts_line
       while @score < @max_score
         keys.shuffle!
         guess_japanise_symbol(keys[0])

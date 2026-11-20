@@ -1,7 +1,51 @@
 require "colorize"
 require "unicode/display_width"
 
-class Debug
+class Show
+  def self.line
+    puts ("=" * 20).white
+  end
+
+  def self.table(data)
+    maxcol = 5
+    lines = [
+      %w[a i u e o],
+      %w[ka ki  ku  ke ko kya kyu kyo],
+      %w[sa shi su  se so sha shu sho],
+      %w[ta chi tsu te to cha chu cho],
+      %w[na ni  nu  ne no nya nyu nyo],
+      %w[na ni  nu  ne no nya nyu nyo],
+      %w[ha hi  fu  he ho hya hyu hyo],
+      %w[ya SP  yu  SP yo],
+      %w[ra ri  ru  re ro rya ryu ryo],
+      %w[wa SP  SP  SP wo],
+      %w[SP SP  SP  SP n],
+      %w[ga gi  gu  ge go gya gyu gyo],
+     ]
+    lines.each do |line|
+      jap_line = []
+      esp_line = []
+      line.each do |es|
+        if es == 'SP'
+          es = ja = ''
+        else
+          ja = data[es]
+          if ja.nil?
+            puts "[WARN] add symbol: #{es}"
+            next
+          end
+        end
+        jap_line << ja
+        jap_line << " " * (maxcol - Unicode::DisplayWidth.of(ja))
+        esp_line << es
+        esp_line << " " * (maxcol - es.length)
+      end
+      puts jap_line.join("").light_blue
+      puts esp_line.join("").blue
+    end
+    puts "\n"
+  end
+
   def self.puts_data(data)
     lines = data.group_by { |k, _v| k[-1]}
 
@@ -20,9 +64,5 @@ class Debug
 
     end
     puts "\n"
-  end
-
-  def self.puts_line
-    puts ("=" * 20).white
   end
 end
