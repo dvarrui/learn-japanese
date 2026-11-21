@@ -16,8 +16,7 @@ class Hiragana
   end
 
   def sounds_to_hiragana(sounds)
-    hiraganas = all_groups
-    hiragana_array = sounds.map { hiraganas[_1.to_sym] || "*" }
+    hiragana_array = sounds.map { @data[_1] || "*" }
     hiragana_array.join("")
   end
 
