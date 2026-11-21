@@ -14,7 +14,7 @@ class Show
       %w[sa shi su  se so | sha shu sho],
       %w[ta chi tsu te to | cha chu cho],
       %w[na ni  nu  ne no | nya nyu nyo],
-      %w[na ni  nu  ne no | nya nyu nyo],
+      %w[ma mi  mu  me mo | mya myu myo],
       %w[ha hi  fu  he ho | hya hyu hyo],
       %w[ya SP  yu  SP yo],
       %w[ra ri  ru  re ro | rya ryu ryo],
