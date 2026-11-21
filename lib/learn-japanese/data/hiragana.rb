@@ -7,7 +7,7 @@ class Hiragana
   attr_reader :data
 
   def initialize
-    filename = File.join(File.dirname(__FILE__), "hiragana.yaml")
+    filename = File.join(File.dirname(__FILE__), "hiragana", "chars.yaml")
     @data = YAML.load_file(filename)
   end
 
