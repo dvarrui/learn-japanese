@@ -17,7 +17,7 @@ Gem::Specification.new do |s|
   s.executables << "learn-japanese"
   s.files = Dir.glob(File.join("lib", "**", "*.*"))
 
-  s.required_ruby_version = ">= 3.3.10"
+  # s.required_ruby_version = ">= 3.3.10"
   s.add_runtime_dependency "colorize", "~> 1.1"
   s.add_runtime_dependency "ruby2d", "~> 0.12"
   s.add_runtime_dependency "thor", "~> 1.5"
