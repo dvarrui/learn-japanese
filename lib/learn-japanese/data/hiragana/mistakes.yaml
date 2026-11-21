@@ -1,0 +1,148 @@
+---
+a: #あ
+- a
+i: #い
+- ko
+u: # う
+- e
+e: #え
+-u
+o: # お
+- a
+ka: # か
+- sa
+- ta
+- ha
+- ga
+ki: # き
+- sa
+- chi
+ku: # く
+- shi
+ke: け #"\u{3051}"
+ko: # こ
+- i
+- ni
+kya: きゃ #
+kyu: きゅ #
+kyo: きょ #
+sa: #さ
+- ki
+shi: # し
+- ku
+su: す #"\u{3059}"
+se: せ #"\u{305B}"
+so: そ #"\u{305D}"
+sha: しゃ
+shu: しゅ
+sho: しょ
+ta: た #"\u{305F}"
+chi: ち #"\u{3061}"
+tsu: つ #"\u{3064}"
+te: て #"\u{3066}"
+to: と #"\u{3068}"
+cha: ちゃ
+chu: ちゅ
+cho: ちょ
+na: な #"\u{306A}"
+ni: # に
+- ko
+nu: # ぬ
+- ne
+- 'no'
+- me
+ne: # ね
+- nu
+'no': の #"\u{306E}"
+- me
+nya: にゃ
+nyu: にゅ
+nyo: にょ
+ha: は #"\u{306F}"
+hi: ひ #"\u{3072}"
+fu: ふ #"\u{3075}"
+he: # へ
+- ku
+ho: ほ #"\u{307B}"
+hya: ひゃ
+hyu: ひゅ
+hyo: ひょ
+ma: # ま
+- ho
+- mo
+- bo
+mi: み # (U+307F)
+mu: む # (U+3080)
+me: # め
+- nu
+- ne
+mo: # も
+- mi
+mya: みゃ
+myu: みゅ
+myo: みょ
+ya: や # (U+3084)
+yu: ゆ # (U+3086)
+yo: よ # (U+3088)
+ra: ら # (U+3089)
+ri: り # (U+308A)
+ru: る # (U+308B)
+re: れ # (U+308C)
+ro: ろ # (U+308D)
+rya: りゃ
+ryu: りゅ
+ryo: りょ
+wa: わ # U+308F
+wo: を # U+3092
+n: ん # U+3093
+gya: ぎゃ
+ga: が # 304C
+gi: ぎ
+gu: ぐ
+ge: # げ
+- se
+- ke
+go: ご
+gya: ぎゃ
+gyu: ぎゅ
+gyo: ぎょ
+za: ざ
+ji: # じ
+- shi
+zu: ず
+ze: ぜ
+zo: ぞ
+ja: じゃ
+ju: じゅ
+jo: じょ
+da: # だ
+- ta
+dji: # ぢ
+- ki
+dzu: # づ
+- tsu
+de: で
+do: ど
+dja: ぢゃ
+dju: ぢゅ
+djo: ぢょ
+ba: ば
+bi: び
+bu: ぶ
+be: べ
+bo: # ぼ
+- ma
+bya: びゃ
+byu: びゅ
+byo: びょ
+pa: # ぱ
+- ba
+pi: # ぴ
+- bi
+pu: ぷ
+pe: # ぺ
+- he
+po: ぽ
+pya: ぴゃ
+pyu: ぴゅ
+pyo: ぴょ
