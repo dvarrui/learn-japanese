@@ -10,10 +10,10 @@ module Game
       @level = level
       @score = 1
       @max_score = max
-  
+
       @words = Dictionary.words
     end
-  
+
     def run
       Show.line
       while @score < @max_score
@@ -21,19 +21,19 @@ module Game
         guess_romaji(@words.first)
       end
     end
-  
+
     private
-  
+
     def guess_romaji(data)
       hiragana = data["hiragana"]
       spanish = data["spanish"]
       sounds = data["sounds"]
       progress = "[ #{@score}/#{@max_score} ]"
-  
+
       print "#{progress.white} Write Romaji for #{hiragana.light_yellow}: "
       resp = $stdin.gets.chomp
       exit if resp.empty?
-  
+
       good = Hiragana.new.hiraganas_to_sound(hiragana.chars)
       if resp == good
         @score += 1
