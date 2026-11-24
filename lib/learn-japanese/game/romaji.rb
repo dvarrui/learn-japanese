@@ -33,7 +33,7 @@ module Game
       resp = $stdin.gets.chomp
       exit if resp.empty?
 
-      good = Hiragana.new.hiraganas_to_sound(hiragana.chars)
+      good = Chars::Hiragana.new.hiraganas_to_sound(hiragana.chars)
       if resp == good
         @score += 1
         puts " " * 9 + spanish.white
