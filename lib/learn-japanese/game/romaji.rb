@@ -37,10 +37,9 @@ module Game
       good = Hiragana.new.hiraganas_to_sound(hiragana.chars)
       if resp == good
         @score += 1
-        puts " " * 9 + "#{spanish} (#{sounds})".white
+        puts " " * 9 + "#{spanish}".white
         return true
       end
-      # puts "Right answer is #{good}".light_red
       puts " " * 9 + "#{spanish} (#{sounds})".light_red
       false
     end
