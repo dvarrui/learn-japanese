@@ -34,10 +34,7 @@ module Chars
     end
 
     def show
-      Show.line
-      puts "Hiragana help\n".upcase.cyan
       Show.table(@data)
-      Show.line
     end
   end
 end

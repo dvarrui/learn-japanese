@@ -46,8 +46,8 @@ class Show
         esp_line << es
         esp_line << " " * (maxcol - es.length)
       end
-      puts jap_line.join("").light_blue
-      puts esp_line.join("").blue
+      puts jap_line.join("").light_cyan #.white #light_blue
+      puts esp_line.join("").light_blue
     end
     puts "\n"
   end
