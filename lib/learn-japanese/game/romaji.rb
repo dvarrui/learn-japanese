@@ -1,8 +1,7 @@
 #!/usr/bin/env ruby
 
 require_relative "../show"
-require_relative "../data/dictionary"
-require_relative "../data/hiragana"
+require_relative "../chars/dictionary"
 
 module Game
   class Romaji
@@ -11,7 +10,7 @@ module Game
       @score = 1
       @max_score = max
 
-      @words = Dictionary.words
+      @words = Chars::Dictionary.words
     end
 
     def run

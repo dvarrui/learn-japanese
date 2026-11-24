@@ -1,6 +1,6 @@
 #!/usr/bin/env ruby
 
-require_relative "../data/hiragana"
+require_relative "../chars/hiragana"
 
 module Game
   class ChooseAnswer

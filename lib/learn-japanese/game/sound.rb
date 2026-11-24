@@ -1,7 +1,7 @@
 require "colorize"
 require_relative "../show"
-require_relative "../data/dictionary"
-require_relative "../data/hiragana"
+require_relative "../chars/dictionary"
+require_relative "../chars/hiragana"
 
 module Game
   class Sound
@@ -13,7 +13,7 @@ module Game
       hiragana = @hiragana.sounds_to_hiragana(sounds)
 
       none = {"hiragana" => hiragana, "spanish" => "?", "sounds" => "?"}
-      words = Dictionary.words
+      words = Chars::Dictionary.words
       words.select { _1["hiragana"] == hiragana }[0] || none
     end
 
