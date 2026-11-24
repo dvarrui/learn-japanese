@@ -1,6 +1,6 @@
 require_relative "learn-japanese/version"
-require_relative "learn-japanese/game/choose-answer"
-require_relative "learn-japanese/game/short-answer"
+require_relative "learn-japanese/game/choose"
+require_relative "learn-japanese/game/short"
 require_relative "learn-japanese/game/sound"
 require_relative "learn-japanese/game/romaji"
 
@@ -27,6 +27,6 @@ module LearnJapanese
   end
 
   def self.sound
-    SoundGame.new.run
+    Game::Sound.new.run
   end
 end
