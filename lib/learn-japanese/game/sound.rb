@@ -6,7 +6,7 @@ require_relative "../data/hiragana"
 module Game
   class Sound
     def initialize
-      @hiragana = Hiragana.new
+      @hiragana = Chars::Hiragana.new
     end
 
     def to_hiragana(sounds)

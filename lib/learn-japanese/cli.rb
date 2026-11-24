@@ -16,6 +16,12 @@ class CLI < Thor
     LearnJapanese.choose
   end
 
+  map ["hi", "-hi", "--hiragana"] => "hiragana"
+  desc "hiragana", "Show the hiragana syllabary"
+  def hiragana
+    LearnJapanese.hiragana
+  end
+
   map ["s", "-s", "--short"] => "short"
   desc "short", "Write right answer"
   def short

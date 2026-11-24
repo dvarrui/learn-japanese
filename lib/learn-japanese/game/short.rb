@@ -5,14 +5,13 @@ require_relative "../data/hiragana"
 module Game
   class ShortAnswer
     def initialize(max = 10)
-      @hiragana = Hiragana.new
+      @hiragana = Chars::Hiragana.new
 
       @score = 1
       @max_score = max
     end
 
     def run
-      @hiragana.show_help
       keys = @hiragana.data.keys
       while @score < @max_score
         keys.shuffle!

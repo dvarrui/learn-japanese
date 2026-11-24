@@ -1,4 +1,5 @@
 require_relative "learn-japanese/version"
+require_relative "learn-japanese/data/hiragana"
 require_relative "learn-japanese/game/choose"
 require_relative "learn-japanese/game/short"
 require_relative "learn-japanese/game/sound"
@@ -16,6 +17,10 @@ module LearnJapanese
 
   def self.choose
     Game::ChooseAnswer.new.run
+  end
+
+  def self.hiragana
+    Data::Hiragana.new.show
   end
 
   def self.romaji

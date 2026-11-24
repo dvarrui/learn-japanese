@@ -5,13 +5,12 @@ require_relative "../data/hiragana"
 module Game
   class ChooseAnswer
     def initialize(max = 10)
-      @hiragana = Hiragana.new
+      @hiragana = Chars::Hiragana.new
       @score = 1
       @max_score = max
     end
 
     def run
-      @hiragana.show_help
       while @score < @max_score
         guess_japanise_symbol(@hiragana.data.keys.clone)
       end
