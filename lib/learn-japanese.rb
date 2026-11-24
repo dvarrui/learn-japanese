@@ -20,7 +20,7 @@ module LearnJapanese
   end
 
   def self.hiragana
-    Data::Hiragana.new.show
+    Chars::Hiragana.new.show
   end
 
   def self.romaji
