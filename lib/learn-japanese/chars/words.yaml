@@ -32,6 +32,12 @@
 - sounds: i-e
   hiragana: いいえ
   spanish: 'no'
+- sounds: ika
+  hiragana: いか
+  spanish: calamar
+- sounds: ike
+  hiragana: いけ
+  spanish: estanque
 - sounds: inu
   hiragana: いぬ
   spanish: perro
@@ -41,12 +47,21 @@
 - sounds: kao
   hiragana: かお
   spanish: cara
+- sounds: kaitemiyou
+  hiragana: かいてみよう
+  spanish: intentar escribir
 - sounds: ki
   hiragana: き
   spanish: árbol
 - sounds: kikai
   hiragana: きかい
   spanish: máquina, oportunidad
+- sounds: kiku
+  hiragana: きく
+  spanish: escuchar
+- sounds: koe
+  hiragana: こえ
+  spanish: voz
 - sounds: konnichiwa
   hiragana: こんにちは
   spanish: hola
@@ -74,3 +89,6 @@
 - sounds: umi
   hiragana: うみ
   spanish: mar
+- sounds: yondemiyou
+  hiragana: よんでみよう
+  spanish: intentar leer
