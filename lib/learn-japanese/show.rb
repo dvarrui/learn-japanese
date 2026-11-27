@@ -26,9 +26,9 @@ class Show
       %w[ba bi bu be bo | bya byu byo],
       %w[pa pi pu pe po | pya pyu pyo]
     ]
-    lines.each do |line|
-      jap_line = []
-      esp_line = []
+    lines.each_with_index do |line, index|
+      jap_line = [(index+1).to_s.rjust(3), "  "]
+      esp_line = ["     "]
       line.each do |es|
         if es == "SP"
           es = ja = ""
